@@ -30,7 +30,7 @@ const App = () => {
         <Stack.Screen
           name="Intro"
           component={IntroScreen}
-          options={{title: 'IntroScreen'}}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Camera"
