@@ -10,7 +10,7 @@ const IntroScreen = ({navigation}) => {
       <AppButton
         title="start"
         containerStyle={styles.buttonContainer}
-        onPress={() => navigation.navigate('Camera')}
+        onPress={() => navigation.navigate('Main')}
       />
     </View>
   );

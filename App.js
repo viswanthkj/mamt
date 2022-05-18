@@ -10,9 +10,9 @@ import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Camera, useCameraDevices} from 'react-native-vision-camera';
 import {
   IntroScreen,
+  MainScreen,
   CameraScreen,
   FilePreviewScreen,
   ResultScreen,
@@ -20,10 +20,6 @@ import {
 
 const App = () => {
   const Stack = createNativeStackNavigator();
-  const availableDevices = useCameraDevices();
-
-  console.log(availableDevices);
-
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -31,6 +27,11 @@ const App = () => {
           name="Intro"
           component={IntroScreen}
           options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Main"
+          component={MainScreen}
+          options={{title: 'MainScreen'}}
         />
         <Stack.Screen
           name="Camera"
