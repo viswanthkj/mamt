@@ -17,39 +17,37 @@ import {
   FilePreviewScreen,
   ResultScreen,
 } from './src/screens';
+import {SafeAreaView} from 'react-native';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Intro"
-          component={IntroScreen}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Main"
-          component={MainScreen}
-          options={{title: 'MainScreen'}}
-        />
-        <Stack.Screen
-          name="Camera"
-          component={CameraScreen}
-          options={{title: 'CameraScreen'}}
-        />
-        <Stack.Screen
-          name="Preview"
-          component={FilePreviewScreen}
-          options={{title: 'FilePreviewScreen'}}
-        />
-        <Stack.Screen
-          name="Result"
-          component={ResultScreen}
-          options={{title: 'ResultScreen'}}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#FFF'}}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Intro"
+            component={IntroScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Main"
+            component={MainScreen}
+            options={{title: 'KYC Info'}}
+          />
+          <Stack.Screen
+            name="Preview"
+            component={FilePreviewScreen}
+            options={{title: 'Preview'}}
+          />
+          <Stack.Screen
+            name="Result"
+            component={ResultScreen}
+            options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 

@@ -78,7 +78,6 @@ const MainScreen = ({navigation}) => {
     }
   };
 
-
   return (
     <View style={{flex: 1, backgroundColor: '#FFF'}}>
       <View
@@ -121,7 +120,7 @@ const MainScreen = ({navigation}) => {
               </View>
             ))) || (
             <TouchableOpacity onPress={() => onButtonPress(1)}>
-              <Text style={styles.titleText}>Upload an Identity</Text>
+              <Text style={styles.uploadText}>Upload an Identity</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -166,7 +165,7 @@ const MainScreen = ({navigation}) => {
               </View>
             ))) || (
             <TouchableOpacity onPress={() => onButtonPress(2)}>
-              <Text style={styles.titleText}>Upload Photo</Text>
+              <Text style={styles.uploadText}>Upload Photo</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -199,5 +198,9 @@ const styles = StyleSheet.create({
   titleText: {
     fontSize: 16,
     color: '#000',
+  },
+  uploadText: {
+    fontSize: 16,
+    color: '#009688',
   },
 });
