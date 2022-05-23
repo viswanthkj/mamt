@@ -2,9 +2,7 @@ import React from 'react';
 import {Image} from 'react-native';
 
 const FilePreviewScreen = ({navigation, route}) => {
-  console.log('viswa-fileUri', route);
   const {fileUri} = route.params;
-  console.log(fileUri);
   return (
     <Image
       resizeMode="cover"

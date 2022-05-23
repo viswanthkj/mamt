@@ -30,28 +30,29 @@ const MainScreen = ({navigation}) => {
     const photoArray = [];
     photoArray.push(source);
     photoArray.push(sourcePhoto);
-    var itemsProcessed = 0;
-    photoArray.forEach(photo => {
-      const data = new FormData();
-      data.append('file', photo);
-      data.append('upload_preset', 'lpdkypfh');
-      data.append('cloud_name', 'viswa-cloud');
-      fetch('https://api.cloudinary.com/v1_1/viswa-cloud/upload', {
-        method: 'post',
-        mode: 'cors',
-        body: data,
-      })
-        .then(res => res.json())
-        .then(data => {
-          itemsProcessed++;
-          if (itemsProcessed === photoArray.length) {
-            navigation.navigate('Result');
-          }
-        })
-        .catch(err => {
-          console.log('viswa-err', err);
-        });
-    });
+    navigation.navigate('Result', {photos: photoArray});
+    // var itemsProcessed = 0;
+    // photoArray.forEach(photo => {
+    //   const data = new FormData();
+    //   data.append('file', photo);
+    //   data.append('upload_preset', 'lpdkypfh');
+    //   data.append('cloud_name', 'viswa-cloud');
+    //   fetch('https://api.cloudinary.com/v1_1/viswa-cloud/upload', {
+    //     method: 'post',
+    //     mode: 'cors',
+    //     body: data,
+    //   })
+    //     .then(res => res.json())
+    //     .then(data => {
+    //       itemsProcessed++;
+    //       if (itemsProcessed === photoArray.length) {
+    //         navigation.navigate('Result');
+    //       }
+    //     })
+    //     .catch(err => {
+    //       console.log('viswa-err', err);
+    //     });
+    // });
   };
   // const result = await launchCamera(options?);
   const onButtonPress = async type => {

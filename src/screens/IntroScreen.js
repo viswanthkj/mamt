@@ -5,7 +5,7 @@ import AppButton from '../components';
 const IntroScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.titleText}>Welcom to mamt</Text>
+      <Text style={styles.titleText}>Welcome to daada</Text>
       <Text style={styles.subTitleText}>Start the KYC process</Text>
       <AppButton
         title="start"
